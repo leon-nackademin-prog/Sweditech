@@ -1,11 +1,11 @@
 ﻿
-using Sweditech.Console.App.Products.Models;
+using Sweditech.ConsoleApp.Products.Models;
 
-namespace Sweditech.Console.App.Products.Interfaces
+namespace Sweditech.ConsoleApp.Products.Interfaces
 {
     public interface IProductService
     {
-        void AddProduct(string name, decimal price);
+        Product AddProduct(string name, decimal price);
         IReadOnlyList<Product> GetAllProducts();
     }
 }
