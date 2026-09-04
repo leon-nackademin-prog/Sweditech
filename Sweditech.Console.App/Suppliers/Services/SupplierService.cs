@@ -7,26 +7,26 @@ internal class SupplierService : ISupplierService
 {
     private readonly List<Supplier> _suppliers = [];
 
-    private Supplier GenerateSupplier(string name, string contactEmail, string contactPhone, string contactAddress)
+    private Supplier GenerateSupplier(string name, string contactEmail, string contactPhone)
     {
-        var supplier = new Supplier(Guid.NewGuid(), name, contactEmail, contactPhone, contactAddress);
+        var supplier = new Supplier(Guid.NewGuid(), name, contactEmail, contactPhone);
         return supplier;
     }
 
-    public Supplier AddSupplier(string name, string contactEmail, string contactPhone, string contactAddress)
+    public Supplier AddSupplier(string name, string contactEmail, string contactPhone)
     {
-        var supplier = GenerateSupplier(name, contactEmail, contactPhone, contactAddress);
+        var supplier = GenerateSupplier(name, contactEmail, contactPhone);
         _suppliers.Add(supplier);
         return supplier;
     }
 
-    public bool RemoveSupplier(Guid companyId)
+    public bool RemoveSupplier(string companyEmail)
     {
-        var supplier = _suppliers.FirstOrDefault(s => s.CompanyId == companyId);
+        var supplier = _suppliers.FirstOrDefault(s => s.ContactEmail == companyEmail);
         if (supplier == null) return false;
         _suppliers.Remove(supplier);
         return true;
     }
 
-    public IReadOnlyList<Supplier> ShowAllSuppliers() => _suppliers;    
+    public IReadOnlyList<Supplier> GetAllSuppliersList() => _suppliers;    
 }

@@ -4,6 +4,5 @@ public record Supplier(
     Guid CompanyId,
     string CompanyName,
     string ContactEmail,
-    string ContactPhone,
-    string ContactAddress
+    string ContactPhone
     );
