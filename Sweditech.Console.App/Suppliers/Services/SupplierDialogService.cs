@@ -64,10 +64,12 @@ public class SupplierDialogService(ISupplierService supplierService) : ISupplier
         Console.Clear();
         Console.WriteLine("Ta bort leverantör, ange leverantörens e-postadress:");
         var supplierToRemove = Console.ReadLine();
+
         if (supplierService.RemoveSupplier(supplierToRemove!))
         {
             Console.WriteLine("Leverantören har tagits bort.");
         }
+
         else
         {
             Console.WriteLine("Ingen leverantör med denna e-postadress hittades.");
