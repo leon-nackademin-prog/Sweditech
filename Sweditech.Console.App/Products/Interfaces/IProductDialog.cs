@@ -1,8 +1,9 @@
 ﻿
 namespace Sweditech.ConsoleApp.Products.Interfaces;
 
-internal interface IProductDialog
+public interface IProductDialog
 {
+    void MenuDialog();
     void AddProductDialog();
     void ShowAllProductsDialog();
 }

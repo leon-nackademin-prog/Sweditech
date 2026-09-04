@@ -1,7 +1,8 @@
 ﻿namespace Sweditech.ConsoleApp.Customers.Interfaces
 {
-    internal interface ICustomerDialog
+    public interface ICustomerDialog
     {
+        void KundMeny();
         void ShowCustomerDialog();
 
         void DisplayCustomerInfo();
