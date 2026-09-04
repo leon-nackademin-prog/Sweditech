@@ -1,22 +1,21 @@
-﻿using Sweditech.Console.App.Suppliers.Interfaces;
-using Sweditech.Console.App.Suppliers.Models;
+﻿using Sweditech.ConsoleApp.Suppliers.Interfaces;
+using Sweditech.ConsoleApp.Suppliers.Models;
 
-namespace Sweditech.Console.App.Suppliers.Services;
+namespace Sweditech.ConsoleApp.Suppliers.Services;
 
 internal class SupplierService : ISupplierService
 {
     private readonly List<Supplier> _suppliers = [];
 
-    //private Supplier GenerateSupplier(string name, string contactEmail, string contactPhone, string contactAddress)
-    //{
-    //    var companyId = Guid.NewGuid();
-    //    var companyName = $"Supplier {companyId}";
-    //    var contactEmail = $"
+    private Supplier GenerateSupplier(string name, string contactEmail, string contactPhone, string contactAddress)
+    {
+        var supplier = new Supplier(Guid.NewGuid(), name, contactEmail, contactPhone, contactAddress);
+        return supplier;
+    }
 
     public Supplier AddSupplier(string name, string contactEmail, string contactPhone, string contactAddress)
     {
-        Console.WriteLine($"Adding supplier: {name}, {contactEmail}, {contactPhone}, {contactAddress}");
-        var supplier = new Supplier(Guid.NewGuid(), name, contactEmail, contactPhone, contactAddress);
+        var supplier = GenerateSupplier(name, contactEmail, contactPhone, contactAddress);
         _suppliers.Add(supplier);
         return supplier;
     }
@@ -30,5 +29,4 @@ internal class SupplierService : ISupplierService
     }
 
     public IReadOnlyList<Supplier> ShowAllSuppliers() => _suppliers;    
-
 }

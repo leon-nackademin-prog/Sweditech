@@ -1,4 +1,4 @@
-﻿namespace Sweditech.Console.App.Suppliers.Interfaces;
+﻿namespace Sweditech.ConsoleApp.Suppliers.Interfaces;
 
 public interface ISupplierDialog
 {

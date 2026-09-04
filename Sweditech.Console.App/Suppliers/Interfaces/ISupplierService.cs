@@ -1,6 +1,6 @@
-﻿using Sweditech.Console.App.Suppliers.Models;
+﻿using Sweditech.ConsoleApp.Suppliers.Models;
 
-namespace Sweditech.Console.App.Suppliers.Interfaces;
+namespace Sweditech.ConsoleApp.Suppliers.Interfaces;
 
 public interface ISupplierService
 {
