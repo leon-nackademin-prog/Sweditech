@@ -1,20 +1,21 @@
 ﻿using Sweditech.Console.App.Suppliers.Interfaces;
+using Sweditech.Console.App.Suppliers.Models;
 
 namespace Sweditech.Console.App.Suppliers.Services;
 
 internal class SupplierService : ISupplierService
 {
-    public void AddSupplier(string name, string contactEmail)
+    public Supplier AddSupplier(string name, string contactEmail, string contactPhone, string contactAddress)
     {
         throw new NotImplementedException();
     }
 
-    public void RemoveSupplier(string name)
+    public bool RemoveSupplier(string name)
     {
         throw new NotImplementedException();
     }
 
-    public void ShowAllSuppliers()
+    public IReadOnlyList<Supplier> ShowAllSuppliers()
     {
         throw new NotImplementedException();
     }
