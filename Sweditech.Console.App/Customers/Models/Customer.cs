@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sweditech.Console.App.Customers.Models
+﻿namespace Sweditech.ConsoleApp.Customers.Models
 {
     internal class Customer
     {
+        public string Name { get; internal set; }
+        public string Email { get; internal set; }
     }
 }
