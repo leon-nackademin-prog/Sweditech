@@ -14,7 +14,6 @@ internal class ProductService : IProductService
         _products.Add(product);
 
         return product;
-       
     }
 
     public IReadOnlyList<Product> GetAllProducts()
