@@ -8,8 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Customers\" />
     <Folder Include="Products\" />
+    <Folder Include="Customers\" />
+    <Folder Include="Suppliers\" />
   </ItemGroup>
 
 </Project>
