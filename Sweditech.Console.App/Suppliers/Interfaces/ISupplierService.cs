@@ -5,6 +5,6 @@ namespace Sweditech.Console.App.Suppliers.Interfaces;
 public interface ISupplierService
 {
     Supplier AddSupplier(string name, string contactEmail, string contactPhone, string contactAddress);
-    bool RemoveSupplier(string name);
+    bool RemoveSupplier(Guid companyId);
     IReadOnlyList<Supplier> ShowAllSuppliers();
 }
