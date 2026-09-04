@@ -81,6 +81,7 @@ public class ProductDialogService(IProductService productService) : IProductDial
     {
         IReadOnlyList<Product> products = productService.GetAllProducts();
 
+        Console.Clear();
         Console.WriteLine("=== Products ===");
         foreach (var product in products)
         {
